@@ -385,7 +385,7 @@ const RentalPropertyCalculator = () => {
   };
 
   // CustomTooltip for the PieChart
-  const CustomTooltip: React.FC<{ active: boolean; payload: any[] }> = ({ active, payload }) => {
+  const CustomTooltip: React.FC<{ active: boolean; payload: { name: string; value: number }[] }> = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-2 border border-gray-200 shadow-sm rounded">
@@ -900,7 +900,7 @@ const RentalPropertyCalculator = () => {
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                           ))}
                         </Pie>
-                        <Tooltip content={<CustomTooltip active={true} payload={[]} />} />
+                        <Tooltip content={<CustomTooltip />} />
                         <Legend />
                       </PieChart>
                     </ResponsiveContainer>
