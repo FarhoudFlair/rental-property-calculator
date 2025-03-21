@@ -900,7 +900,7 @@ const RentalPropertyCalculator = () => {
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                           ))}
                         </Pie>
-                        <Tooltip content={<CustomTooltip />} />
+                        <Tooltip content={<CustomTooltip active={false} payload={[]} />} />
                         <Legend />
                       </PieChart>
                     </ResponsiveContainer>
@@ -1187,7 +1187,7 @@ const RentalPropertyCalculator = () => {
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                           ))}
                         </Pie>
-                        <Tooltip content={<CustomTooltip active={true} payload={[]} />} />
+                        <Tooltip content={<CustomTooltip active={false} payload={[]} />} />
                         <Legend />
                       </PieChart>
                     </ResponsiveContainer>
